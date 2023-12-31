@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Site Réactif</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Votre en-tête ici -->
+    </header>
+    <main>
+        <div class="container">
+            <figure>
+                <img src="chemin_image_1.jpg" alt="Description image 1">
+                <figcaption>Description image 1</figcaption>
+            </figure>
+            <!-- Ajoutez d'autres figures avec leurs descriptions -->
+        </div>
+        <p>Texte du paragraphe ici</p>
+        <!-- Ajoutez d'autres contenus -->
+    </main>
+    <footer>
+        <!-- Votre pied de page ici -->
+    </footer>
+</body>
+</html>
+/* Styles généraux pour tout l'écran */
+/* Utilisez une approche mobile-first */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+/* Media query pour la vue tablette */
+@media screen and (min-width: 772px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+    /* Ajoutez des styles spécifiques pour la tablette */
+}
+
+/* Media query pour la vue grand écran */
+@media screen and (min-width: 992px) {
+    .specific-figure {
+        grid-column: span 2;
+    }
+    /* Ajoutez des styles spécifiques pour le grand écran */
+}
+
+/* Media query pour prefers-reduced-motion */
+@media screen and (prefers-reduced-motion: reduce) {
+    /* Ajoutez des styles pour réduire les animations */
+}
+
+/* Media query pour les couleurs sombres */
+@media (prefers-color-scheme: dark) {
+    /* Ajoutez des styles pour les couleurs sombres */
+}
